@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 '''type-annotated funtion taking a list of floats and return sum'''
+from typing import List
 
 
-def sum_list(input_list: float) -> float:
+def sum_list(input_list: List[float]) -> float:
     '''return sum of list elements'''
-    total: float = 0
-    for idx in range(len(input_list)):
-        total += input_list[idx]
+    total: float = sum(input_list)
     return total
